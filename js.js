@@ -1,6 +1,9 @@
 function appendValue(value) {
-  document.getElementById('display').value += value;
+  const display = document.getElementById('display')
+  if ( display.value  == 'Error' ) { display.value = '' }
+  display.value += value;
 }
+
 
 function clearDisplay() {
   document.getElementById('display').value = '';
